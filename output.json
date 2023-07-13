@@ -1,3 +1,4 @@
+[
 {
 	"robot": {
 		"@generator": "Robot 5.0.1 (Python 3.11.1 on win32)",
@@ -807,3 +808,4 @@
 		"errors": null
 	}
 }
+]
