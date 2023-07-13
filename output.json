@@ -1,0 +1,809 @@
+{
+	"robot": {
+		"@generator": "Robot 5.0.1 (Python 3.11.1 on win32)",
+		"@generated": "20230609 08:43:05.720",
+		"@rpa": "false",
+		"@schemaversion": "3",
+		"suite": {
+			"@id": "s1",
+			"@name": "Auto Login",
+			"@source": "D:\\WEB_HUB\\tests\\hub_web\\auto_login.robot",
+			"test": {
+				"@id": "s1-t1",
+				"@name": "Access edtech Maxia",
+				"@line": "13",
+				"kw": [{
+					"@name": "Open the browser",
+					"@library": "keywords_gerais",
+					"kw": [{
+						"@name": "Open Browser",
+						"@library": "SeleniumLibrary",
+						"arg": "browser=chrome",
+						"doc": "Opens a new browser instance to the optional ``url``.",
+						"msg": {
+							"@timestamp": "20230609 08:43:06.193",
+							"@level": "INFO",
+							"#text": "Opening browser 'chrome' to base url 'None'."
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:06.193",
+							"@endtime": "20230609 08:43:07.382"
+						}
+					}, {
+						"@name": "Maximize Browser Window",
+						"@library": "SeleniumLibrary",
+						"doc": "Maximizes current browser window.",
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:07.383",
+							"@endtime": "20230609 08:43:07.497"
+						}
+					}],
+					"status": {
+						"@status": "PASS",
+						"@starttime": "20230609 08:43:06.193",
+						"@endtime": "20230609 08:43:07.497"
+					}
+				}, {
+					"@name": "Go to the Educational Hub's Home Page",
+					"@library": "keywords_gerais",
+					"kw": [{
+						"@name": "Go To",
+						"@library": "SeleniumLibrary",
+						"arg": "${URL}",
+						"doc": "Navigates the current browser window to the provided ``url``.",
+						"msg": {
+							"@timestamp": "20230609 08:43:07.498",
+							"@level": "INFO",
+							"#text": "Opening url 'https://apphub.educacional.com/login'"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:07.498",
+							"@endtime": "20230609 08:43:09.817"
+						}
+					}, {
+						"@name": "Wait Until Element Is Visible",
+						"@library": "SeleniumLibrary",
+						"arg": ["${BOTAO_ENTENDI}", "timeout=30"],
+						"doc": "Waits until the element ``locator`` is visible.",
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:09.817",
+							"@endtime": "20230609 08:43:09.880"
+						}
+					}, {
+						"@name": "Click Button",
+						"@library": "SeleniumLibrary",
+						"arg": "${BOTAO_ENTENDI}",
+						"doc": "Clicks the button identified by ``locator``.",
+						"msg": {
+							"@timestamp": "20230609 08:43:09.880",
+							"@level": "INFO",
+							"#text": "Clicking button 'xpath=//*[@id=\"cookie-notice\"]/div[2]/button'."
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:09.880",
+							"@endtime": "20230609 08:43:09.959"
+						}
+					}],
+					"status": {
+						"@status": "PASS",
+						"@starttime": "20230609 08:43:07.497",
+						"@endtime": "20230609 08:43:09.959"
+					}
+				}, {
+					"@name": "Search for a school",
+					"@library": "keywords_login",
+					"kw": [{
+						"@name": "Input Text",
+						"@library": "SeleniumLibrary",
+						"arg": ["${PROCURE_SUA_ESCOLA_WEB}", "Escola da Demonstra"],
+						"doc": "Types the given ``text`` into the text field identified by ``locator``.",
+						"msg": {
+							"@timestamp": "20230609 08:43:09.960",
+							"@level": "INFO",
+							"#text": "Typing text 'Escola da Demonstra' into text field 'xpath=//input[contains(@role,'combobox')]'."
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:09.960",
+							"@endtime": "20230609 08:43:10.070"
+						}
+					}, {
+						"@name": "Wait Until Page Contains",
+						"@library": "SeleniumLibrary",
+						"arg": ["Escola da Demonstra\u00c3\u00a7\u00c3\u00a3o", "timeout=30"],
+						"doc": "Waits until ``text`` appears on the current page.",
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:10.070",
+							"@endtime": "20230609 08:43:11.318"
+						}
+					}, {
+						"@name": "Press Keys",
+						"@library": "SeleniumLibrary",
+						"arg": ["None", "PAGE_DOWN"],
+						"doc": "Simulates the user pressing key(s) to an element or on the active browser.",
+						"msg": [{
+							"@timestamp": "20230609 08:43:11.318",
+							"@level": "INFO",
+							"#text": "Sending key(s) ('PAGE_DOWN',) to page."
+						}, {
+							"@timestamp": "20230609 08:43:11.318",
+							"@level": "INFO",
+							"#text": "Pressing special key PAGE_DOWN to browser."
+						}, {
+							"@timestamp": "20230609 08:43:11.318",
+							"@level": "INFO",
+							"#text": "Releasing special key PAGE_DOWN."
+						}],
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:11.318",
+							"@endtime": "20230609 08:43:11.331"
+						}
+					}, {
+						"@name": "Press Keys",
+						"@library": "SeleniumLibrary",
+						"arg": ["None", "RETURN"],
+						"doc": "Simulates the user pressing key(s) to an element or on the active browser.",
+						"msg": [{
+							"@timestamp": "20230609 08:43:11.331",
+							"@level": "INFO",
+							"#text": "Sending key(s) ('RETURN',) to page."
+						}, {
+							"@timestamp": "20230609 08:43:11.331",
+							"@level": "INFO",
+							"#text": "Pressing special key RETURN to browser."
+						}, {
+							"@timestamp": "20230609 08:43:11.331",
+							"@level": "INFO",
+							"#text": "Releasing special key RETURN."
+						}],
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:11.331",
+							"@endtime": "20230609 08:43:11.346"
+						}
+					}],
+					"status": {
+						"@status": "PASS",
+						"@starttime": "20230609 08:43:09.959",
+						"@endtime": "20230609 08:43:11.346"
+					}
+				}, {
+					"@name": "Validate login time",
+					"@library": "keywords_login",
+					"kw": [{
+						"@name": "Get Time",
+						"@library": "BuiltIn",
+						"var": "${start_time}",
+						"doc": "Returns the given time in the requested format.",
+						"msg": {
+							"@timestamp": "20230609 08:43:11.347",
+							"@level": "INFO",
+							"#text": "${start_time} = 2023-06-09 08:43:11"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:11.347",
+							"@endtime": "20230609 08:43:11.347"
+						}
+					}, {
+						"@name": "Enter access data",
+						"@library": "keywords_login",
+						"kw": [{
+							"@name": "Wait Until Page Contains",
+							"@library": "SeleniumLibrary",
+							"arg": ["Entrar com e-mail ou usu\u00c3\u00a1rio", "timeout=30"],
+							"doc": "Waits until ``text`` appears on the current page.",
+							"status": {
+								"@status": "PASS",
+								"@starttime": "20230609 08:43:11.348",
+								"@endtime": "20230609 08:43:12.214"
+							}
+						}, {
+							"@name": "Input Text",
+							"@library": "SeleniumLibrary",
+							"arg": ["${INPUT_USUARIO_WEB}", "rasini88"],
+							"doc": "Types the given ``text`` into the text field identified by ``locator``.",
+							"msg": {
+								"@timestamp": "20230609 08:43:12.215",
+								"@level": "INFO",
+								"#text": "Typing text 'rasini88' into text field 'xpath=//input[@type='text']'."
+							},
+							"status": {
+								"@status": "PASS",
+								"@starttime": "20230609 08:43:12.215",
+								"@endtime": "20230609 08:43:12.279"
+							}
+						}, {
+							"@name": "Input Text",
+							"@library": "SeleniumLibrary",
+							"arg": ["${INPUT_SENHA_WEB}", "Polosul21!"],
+							"doc": "Types the given ``text`` into the text field identified by ``locator``.",
+							"msg": {
+								"@timestamp": "20230609 08:43:12.280",
+								"@level": "INFO",
+								"#text": "Typing text 'Polosul21!' into text field 'xpath=//input[@type='password']'."
+							},
+							"status": {
+								"@status": "PASS",
+								"@starttime": "20230609 08:43:12.280",
+								"@endtime": "20230609 08:43:12.345"
+							}
+						}],
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:11.347",
+							"@endtime": "20230609 08:43:12.346"
+						}
+					}, {
+						"@name": "Click on Login button",
+						"@library": "keywords_login",
+						"kw": {
+							"@name": "Click Button",
+							"@library": "SeleniumLibrary",
+							"arg": "${BOTAO_ENTRAR_WEB}",
+							"doc": "Clicks the button identified by ``locator``.",
+							"msg": {
+								"@timestamp": "20230609 08:43:12.346",
+								"@level": "INFO",
+								"#text": "Clicking button 'xpath=//button[@type='submit']'."
+							},
+							"status": {
+								"@status": "PASS",
+								"@starttime": "20230609 08:43:12.346",
+								"@endtime": "20230609 08:43:12.395"
+							}
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:12.346",
+							"@endtime": "20230609 08:43:12.395"
+						}
+					}, {
+						"@name": "Get Time",
+						"@library": "BuiltIn",
+						"var": "${end_time}",
+						"doc": "Returns the given time in the requested format.",
+						"msg": {
+							"@timestamp": "20230609 08:43:12.395",
+							"@level": "INFO",
+							"#text": "${end_time} = 2023-06-09 08:43:12"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:12.395",
+							"@endtime": "20230609 08:43:12.395"
+						}
+					}, {
+						"@name": "Convert To DateTime",
+						"@library": "keywords_gerais",
+						"var": "${start_datetime}",
+						"arg": ["${start_time}", "result_format=%Y-%m-%d %H:%M:%S"],
+						"kw": {
+							"@name": "Evaluate",
+							"@library": "BuiltIn",
+							"var": "${time}",
+							"arg": "datetime.datetime.strptime(\"${time_string}\", \"%Y-%m-%d %H:%M:%S\")",
+							"doc": "Evaluates the given expression in Python and returns the result.",
+							"msg": {
+								"@timestamp": "20230609 08:43:12.398",
+								"@level": "INFO",
+								"#text": "${time} = 2023-06-09 08:43:11"
+							},
+							"status": {
+								"@status": "PASS",
+								"@starttime": "20230609 08:43:12.395",
+								"@endtime": "20230609 08:43:12.398"
+							}
+						},
+						"msg": {
+							"@timestamp": "20230609 08:43:12.398",
+							"@level": "INFO",
+							"#text": "${start_datetime} = 2023-06-09 08:43:11"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:12.395",
+							"@endtime": "20230609 08:43:12.398"
+						}
+					}, {
+						"@name": "Convert To DateTime",
+						"@library": "keywords_gerais",
+						"var": "${end_datetime}",
+						"arg": ["${end_time}", "result_format=%Y-%m-%d %H:%M:%S"],
+						"kw": {
+							"@name": "Evaluate",
+							"@library": "BuiltIn",
+							"var": "${time}",
+							"arg": "datetime.datetime.strptime(\"${time_string}\", \"%Y-%m-%d %H:%M:%S\")",
+							"doc": "Evaluates the given expression in Python and returns the result.",
+							"msg": {
+								"@timestamp": "20230609 08:43:12.399",
+								"@level": "INFO",
+								"#text": "${time} = 2023-06-09 08:43:12"
+							},
+							"status": {
+								"@status": "PASS",
+								"@starttime": "20230609 08:43:12.398",
+								"@endtime": "20230609 08:43:12.399"
+							}
+						},
+						"msg": {
+							"@timestamp": "20230609 08:43:12.399",
+							"@level": "INFO",
+							"#text": "${end_datetime} = 2023-06-09 08:43:12"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:12.398",
+							"@endtime": "20230609 08:43:12.399"
+						}
+					}, {
+						"@name": "Evaluate",
+						"@library": "BuiltIn",
+						"var": "${start_timestamp}",
+						"arg": "int(${start_datetime.timestamp()})",
+						"doc": "Evaluates the given expression in Python and returns the result.",
+						"msg": {
+							"@timestamp": "20230609 08:43:12.399",
+							"@level": "INFO",
+							"#text": "${start_timestamp} = 1686310991"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:12.399",
+							"@endtime": "20230609 08:43:12.399"
+						}
+					}, {
+						"@name": "Evaluate",
+						"@library": "BuiltIn",
+						"var": "${end_timestamp}",
+						"arg": "int(${end_datetime.timestamp()})",
+						"doc": "Evaluates the given expression in Python and returns the result.",
+						"msg": {
+							"@timestamp": "20230609 08:43:12.400",
+							"@level": "INFO",
+							"#text": "${end_timestamp} = 1686310992"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:12.400",
+							"@endtime": "20230609 08:43:12.400"
+						}
+					}, {
+						"@name": "Evaluate",
+						"@library": "BuiltIn",
+						"var": "${time_difference}",
+						"arg": "${end_timestamp} - ${start_timestamp}",
+						"doc": "Evaluates the given expression in Python and returns the result.",
+						"msg": {
+							"@timestamp": "20230609 08:43:12.400",
+							"@level": "INFO",
+							"#text": "${time_difference} = 1"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:12.400",
+							"@endtime": "20230609 08:43:12.400"
+						}
+					}, {
+						"@name": "Log",
+						"@library": "BuiltIn",
+						"arg": "A a\u00c3\u00a7\u00c3\u00a3o levou ${time_difference} segundos",
+						"doc": "Logs the given message with the given level.",
+						"msg": {
+							"@timestamp": "20230609 08:43:12.401",
+							"@level": "INFO",
+							"#text": "A a\u00c3\u00a7\u00c3\u00a3o levou 1 segundos"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:12.400",
+							"@endtime": "20230609 08:43:12.401"
+						}
+					}],
+					"status": {
+						"@status": "PASS",
+						"@starttime": "20230609 08:43:11.347",
+						"@endtime": "20230609 08:43:12.401"
+					}
+				}, {
+					"@name": "Validate Home Page",
+					"@library": "keywords_gerais",
+					"kw": [{
+						"@name": "Get Time",
+						"@library": "BuiltIn",
+						"var": "${start_time}",
+						"doc": "Returns the given time in the requested format.",
+						"msg": {
+							"@timestamp": "20230609 08:43:12.402",
+							"@level": "INFO",
+							"#text": "${start_time} = 2023-06-09 08:43:12"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:12.401",
+							"@endtime": "20230609 08:43:12.402"
+						}
+					}, {
+						"@name": "Wait Until Page Contains",
+						"@library": "SeleniumLibrary",
+						"arg": ["Meus Aplicativos", "timeout=30"],
+						"doc": "Waits until ``text`` appears on the current page.",
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:12.402",
+							"@endtime": "20230609 08:43:15.514"
+						}
+					}, {
+						"@name": "Wait Until Page Contains",
+						"@library": "SeleniumLibrary",
+						"arg": "Acessar como:",
+						"doc": "Waits until ``text`` appears on the current page.",
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:15.514",
+							"@endtime": "20230609 08:43:15.517"
+						}
+					}, {
+						"@name": "Wait Until Page Contains",
+						"@library": "SeleniumLibrary",
+						"arg": "Aluno",
+						"doc": "Waits until ``text`` appears on the current page.",
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:15.517",
+							"@endtime": "20230609 08:43:15.534"
+						}
+					}, {
+						"@name": "Get Time",
+						"@library": "BuiltIn",
+						"var": "${end_time}",
+						"doc": "Returns the given time in the requested format.",
+						"msg": {
+							"@timestamp": "20230609 08:43:15.534",
+							"@level": "INFO",
+							"#text": "${end_time} = 2023-06-09 08:43:15"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:15.534",
+							"@endtime": "20230609 08:43:15.534"
+						}
+					}, {
+						"@name": "Convert To DateTime",
+						"@library": "keywords_gerais",
+						"var": "${start_datetime}",
+						"arg": ["${start_time}", "result_format=%Y-%m-%d %H:%M:%S"],
+						"kw": {
+							"@name": "Evaluate",
+							"@library": "BuiltIn",
+							"var": "${time}",
+							"arg": "datetime.datetime.strptime(\"${time_string}\", \"%Y-%m-%d %H:%M:%S\")",
+							"doc": "Evaluates the given expression in Python and returns the result.",
+							"msg": {
+								"@timestamp": "20230609 08:43:15.534",
+								"@level": "INFO",
+								"#text": "${time} = 2023-06-09 08:43:12"
+							},
+							"status": {
+								"@status": "PASS",
+								"@starttime": "20230609 08:43:15.534",
+								"@endtime": "20230609 08:43:15.534"
+							}
+						},
+						"msg": {
+							"@timestamp": "20230609 08:43:15.534",
+							"@level": "INFO",
+							"#text": "${start_datetime} = 2023-06-09 08:43:12"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:15.534",
+							"@endtime": "20230609 08:43:15.534"
+						}
+					}, {
+						"@name": "Convert To DateTime",
+						"@library": "keywords_gerais",
+						"var": "${end_datetime}",
+						"arg": ["${end_time}", "result_format=%Y-%m-%d %H:%M:%S"],
+						"kw": {
+							"@name": "Evaluate",
+							"@library": "BuiltIn",
+							"var": "${time}",
+							"arg": "datetime.datetime.strptime(\"${time_string}\", \"%Y-%m-%d %H:%M:%S\")",
+							"doc": "Evaluates the given expression in Python and returns the result.",
+							"msg": {
+								"@timestamp": "20230609 08:43:15.534",
+								"@level": "INFO",
+								"#text": "${time} = 2023-06-09 08:43:15"
+							},
+							"status": {
+								"@status": "PASS",
+								"@starttime": "20230609 08:43:15.534",
+								"@endtime": "20230609 08:43:15.534"
+							}
+						},
+						"msg": {
+							"@timestamp": "20230609 08:43:15.534",
+							"@level": "INFO",
+							"#text": "${end_datetime} = 2023-06-09 08:43:15"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:15.534",
+							"@endtime": "20230609 08:43:15.534"
+						}
+					}, {
+						"@name": "Evaluate",
+						"@library": "BuiltIn",
+						"var": "${start_timestamp}",
+						"arg": "int(${start_datetime.timestamp()})",
+						"doc": "Evaluates the given expression in Python and returns the result.",
+						"msg": {
+							"@timestamp": "20230609 08:43:15.534",
+							"@level": "INFO",
+							"#text": "${start_timestamp} = 1686310992"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:15.534",
+							"@endtime": "20230609 08:43:15.534"
+						}
+					}, {
+						"@name": "Evaluate",
+						"@library": "BuiltIn",
+						"var": "${end_timestamp}",
+						"arg": "int(${end_datetime.timestamp()})",
+						"doc": "Evaluates the given expression in Python and returns the result.",
+						"msg": {
+							"@timestamp": "20230609 08:43:15.534",
+							"@level": "INFO",
+							"#text": "${end_timestamp} = 1686310995"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:15.534",
+							"@endtime": "20230609 08:43:15.534"
+						}
+					}, {
+						"@name": "Evaluate",
+						"@library": "BuiltIn",
+						"var": "${time_difference}",
+						"arg": "${end_timestamp} - ${start_timestamp}",
+						"doc": "Evaluates the given expression in Python and returns the result.",
+						"msg": {
+							"@timestamp": "20230609 08:43:15.534",
+							"@level": "INFO",
+							"#text": "${time_difference} = 3"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:15.534",
+							"@endtime": "20230609 08:43:15.534"
+						}
+					}, {
+						"@name": "Log",
+						"@library": "BuiltIn",
+						"arg": "A a\u00c3\u00a7\u00c3\u00a3o levou ${time_difference} segundos",
+						"doc": "Logs the given message with the given level.",
+						"msg": {
+							"@timestamp": "20230609 08:43:15.534",
+							"@level": "INFO",
+							"#text": "A a\u00c3\u00a7\u00c3\u00a3o levou 3 segundos"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:15.534",
+							"@endtime": "20230609 08:43:15.534"
+						}
+					}],
+					"status": {
+						"@status": "PASS",
+						"@starttime": "20230609 08:43:12.401",
+						"@endtime": "20230609 08:43:15.534"
+					}
+				}, {
+					"@name": "Validate the time to search for an edtech Maxia",
+					"@library": "keywords_maxia",
+					"kw": [{
+						"@name": "Get Time",
+						"@library": "BuiltIn",
+						"var": "${start_time}",
+						"doc": "Returns the given time in the requested format.",
+						"msg": {
+							"@timestamp": "20230609 08:43:15.534",
+							"@level": "INFO",
+							"#text": "${start_time} = 2023-06-09 08:43:15"
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:15.534",
+							"@endtime": "20230609 08:43:15.534"
+						}
+					}, {
+						"@name": "Input Text",
+						"@library": "SeleniumLibrary",
+						"arg": ["${BUSCAR_APLICATIVO}", "Max.ia"],
+						"doc": "Types the given ``text`` into the text field identified by ``locator``.",
+						"msg": {
+							"@timestamp": "20230609 08:43:15.534",
+							"@level": "INFO",
+							"#text": "Typing text 'Max.ia' into text field 'xpath=//input[contains(@placeholder,'Buscar aplicativo')]'."
+						},
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:15.534",
+							"@endtime": "20230609 08:43:15.597"
+						}
+					}, {
+						"@name": "Wait Until Element Is Visible",
+						"@library": "SeleniumLibrary",
+						"arg": ["${EDTECH_MAXIA}", "timeout=30"],
+						"doc": "Waits until the element ``locator`` is visible.",
+						"msg": [{
+							"@timestamp": "20230609 08:43:45.793",
+							"@level": "INFO",
+							"@html": "true",
+							"#text": "</td></tr><tr><td colspan=\"3\"><a href=\"selenium-screenshot-1.png\"><img src=\"selenium-screenshot-1.png\" width=\"800px\"></a>"
+						}, {
+							"@timestamp": "20230609 08:43:45.793",
+							"@level": "FAIL",
+							"#text": "Element 'xpath=//p[contains(.,'Max.IA')]' not visible after 30 seconds."
+						}],
+						"status": {
+							"@status": "FAIL",
+							"@starttime": "20230609 08:43:15.597",
+							"@endtime": "20230609 08:43:45.793"
+						}
+					}, {
+						"@name": "Get Time",
+						"@library": "BuiltIn",
+						"var": "${end_time}",
+						"doc": "Returns the given time in the requested format.",
+						"status": {
+							"@status": "NOT RUN",
+							"@starttime": "20230609 08:43:45.793",
+							"@endtime": "20230609 08:43:45.793"
+						}
+					}, {
+						"@name": "Convert To DateTime",
+						"@library": "keywords_gerais",
+						"var": "${start_datetime}",
+						"arg": ["${start_time}", "result_format=%Y-%m-%d %H:%M:%S"],
+						"status": {
+							"@status": "NOT RUN",
+							"@starttime": "20230609 08:43:45.793",
+							"@endtime": "20230609 08:43:45.793"
+						}
+					}, {
+						"@name": "Convert To DateTime",
+						"@library": "keywords_gerais",
+						"var": "${end_datetime}",
+						"arg": ["${end_time}", "result_format=%Y-%m-%d %H:%M:%S"],
+						"status": {
+							"@status": "NOT RUN",
+							"@starttime": "20230609 08:43:45.793",
+							"@endtime": "20230609 08:43:45.793"
+						}
+					}, {
+						"@name": "Evaluate",
+						"@library": "BuiltIn",
+						"var": "${start_timestamp}",
+						"arg": "int(${start_datetime.timestamp()})",
+						"doc": "Evaluates the given expression in Python and returns the result.",
+						"status": {
+							"@status": "NOT RUN",
+							"@starttime": "20230609 08:43:45.793",
+							"@endtime": "20230609 08:43:45.793"
+						}
+					}, {
+						"@name": "Evaluate",
+						"@library": "BuiltIn",
+						"var": "${end_timestamp}",
+						"arg": "int(${end_datetime.timestamp()})",
+						"doc": "Evaluates the given expression in Python and returns the result.",
+						"status": {
+							"@status": "NOT RUN",
+							"@starttime": "20230609 08:43:45.793",
+							"@endtime": "20230609 08:43:45.793"
+						}
+					}, {
+						"@name": "Evaluate",
+						"@library": "BuiltIn",
+						"var": "${time_difference}",
+						"arg": "${end_timestamp} - ${start_timestamp}",
+						"doc": "Evaluates the given expression in Python and returns the result.",
+						"status": {
+							"@status": "NOT RUN",
+							"@starttime": "20230609 08:43:45.793",
+							"@endtime": "20230609 08:43:45.793"
+						}
+					}, {
+						"@name": "Log",
+						"@library": "BuiltIn",
+						"arg": "A a\u00c3\u00a7\u00c3\u00a3o levou ${time_difference} segundos",
+						"doc": "Logs the given message with the given level.",
+						"status": {
+							"@status": "NOT RUN",
+							"@starttime": "20230609 08:43:45.793",
+							"@endtime": "20230609 08:43:45.793"
+						}
+					}],
+					"status": {
+						"@status": "FAIL",
+						"@starttime": "20230609 08:43:15.534",
+						"@endtime": "20230609 08:43:45.793"
+					}
+				}, {
+					"@name": "Validate the time to select and load an edtech Maxia",
+					"@library": "keywords_maxia",
+					"status": {
+						"@status": "NOT RUN",
+						"@starttime": "20230609 08:43:45.793",
+						"@endtime": "20230609 08:43:45.793"
+					}
+				}, {
+					"@name": "Close the Browser",
+					"@library": "keywords_gerais",
+					"@type": "TEARDOWN",
+					"kw": {
+						"@name": "Close All Browsers",
+						"@library": "SeleniumLibrary",
+						"doc": "Closes all open browsers and resets the browser cache.",
+						"status": {
+							"@status": "PASS",
+							"@starttime": "20230609 08:43:45.808",
+							"@endtime": "20230609 08:43:47.884"
+						}
+					},
+					"status": {
+						"@status": "PASS",
+						"@starttime": "20230609 08:43:45.808",
+						"@endtime": "20230609 08:43:47.884"
+					}
+				}],
+				"status": {
+					"@status": "FAIL",
+					"@starttime": "20230609 08:43:06.186",
+					"@endtime": "20230609 08:43:47.884",
+					"#text": "Element 'xpath=//p[contains(.,'Max.IA')]' not visible after 30 seconds."
+				}
+			},
+			"doc": "HUB - WEB",
+			"status": {
+				"@status": "FAIL",
+				"@starttime": "20230609 08:43:05.720",
+				"@endtime": "20230609 08:43:47.886"
+			}
+		},
+		"statistics": {
+			"total": {
+				"stat": {
+					"@pass": "0",
+					"@fail": "1",
+					"@skip": "0",
+					"#text": "All Tests"
+				}
+			},
+			"tag": null,
+			"suite": {
+				"stat": {
+					"@pass": "0",
+					"@fail": "1",
+					"@skip": "0",
+					"@id": "s1",
+					"@name": "Auto Login",
+					"#text": "Auto Login"
+				}
+			}
+		},
+		"errors": null
+	}
+}
